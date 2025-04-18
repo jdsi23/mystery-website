@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  background-color: #121212;
+  scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure elements wrap on small screens */
+  position: relative;
+  z-index: 10;
+  width: 100%; /* Ensure header takes full width */
+}
+
+/* Logo */
+.logo-link {
+  position: relative;
+  left: 100px; /* Move the logo slightly to the right */
+}
+
+.logo-link .logo {
+  height: 180px;
+  width: auto;
+  max-width: 100%; /* Ensure logo doesn't overflow */
+}
+
+/* Navigation Links */
+.nav-links ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow navigation items to wrap */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s;
+  font-family: 'Cinzel', serif;
+}
+
+.nav-links a:hover {
+  color: #00ffae;
+}
+
+/* Tickets Button */
+.tickets-dropdown {
+  position: relative;
+  right: 100px; /* Move the tickets button slightly to the left */
+}
+
+.tickets-button {
+  background: #00ffae;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Cinzel', serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: #222;
+  border: 1px solid #00ffae;
+  min-width: 180px;
+  z-index: 5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+.tickets-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#parkVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text h2 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.overlay-text p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  background: linear-gradient(#121212, #1a1a1a);
+}
+
+/* Footer */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.footer-logo {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center; /* Center text when stacked */
+  }
+
+  .logo-link {
+    position: relative;
+    left: 0; /* Adjust logo position for mobile */
+    margin-bottom: 1rem; /* Space below logo */
+  }
+
+  .logo-link .logo {
+    height: 120px; /* Reduce logo size for mobile */
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%; /* Make navigation take full width */
+    padding: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.6rem; /* Adjust font size for mobile */
+    text-align: center; /* Center links */
+  }
+
+  .tickets-button {
+    font-size: 1.6rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .tickets-dropdown {
+    position: relative;
+    right: 0;
+    margin-top: 1rem;
+    text-align: center; /* Center tickets dropdown */
+  }
+
+  .tickets-button {
+    margin: 0 auto; /* Center button */
+  }
+}
+
+/* Tablet and Large Mobile Devices */
+@media (max-width: 1024px) {
+  .nav-links ul {
+    gap: 2rem;
+  }
+
+  .tickets-button {
+    font-size: 1.8rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
